@@ -73,58 +73,66 @@ p {
     background-color: var(--background-color) !important;
 }
 
-.project-card {
-    background: #16182a;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+.project-card.card {
+    background: #16182a !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
 }
 
-.project-card__media {
-    background: radial-gradient(120% 80% at 20% 20%, rgba(56, 196, 150, 0.2) 0%, rgba(51, 106, 255, 0.12) 40%, transparent 70%), #111325;
+.project-card .project-image {
     border-radius: 10px;
+    margin: 1rem 1rem 0 1rem;
+    width: calc(100% - 2rem);
     height: 9rem;
-    margin: 1rem;
+    object-fit: cover;
 }
 
-.project-card__body {
-    padding: 1.25rem;
+.project-card .project-body {
+    padding: 1.25rem !important;
 }
 
-.project-card__title {
-    font-family: Poppins;
-    font-weight: 600;
-    font-size: 1.25rem;
-    margin: 0 0 0.5rem 0;
+.project-card .project-title {
+    font-family: Poppins !important;
+    font-weight: 600 !important;
+    font-size: 1.25rem !important;
+    color: var(--primary-text) !important;
+    margin-bottom: 0.5rem !important;
 }
 
-.project-card__text {
-    color: var(--secondary-text);
-    font-size: 0.95rem;
-    line-height: 1.6rem;
-    margin: 0 0 1rem 0;
+.project-card .project-description {
+    color: var(--secondary-text) !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6rem !important;
+    margin-bottom: 1rem !important;
 }
 
-.project-card__footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding-top: 0.75rem;
-    margin-top: 0.75rem;
+.project-card .project-date {
+    color: var(--secondary-text) !important;
+    font-size: 0.85rem !important;
 }
 
-.project-card__date {
-    color: var(--secondary-text);
-    font-size: 0.85rem;
+.project-card .project-link.btn {
+    background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%) !important;
+    border: none !important;
+    color: white !important;
+    font-size: 0.85rem !important;
 }
 
-.project-card__link {
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-decoration: none;
+.skill-card.card {
+    background: #16182a !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+}
+
+.skill-card .card-title {
+    font-family: Poppins !important;
+    font-weight: 600 !important;
+    color: var(--primary-text) !important;
+}
+
+.skill-card .card-text {
+    color: var(--secondary-text) !important;
+    font-size: 0.95rem !important;
 }
 
 .btn {
@@ -188,57 +196,57 @@ p {
     line-height: 2rem;
 }
 
-.hero-get-in-touch-button {
-    display: inline-block;
-    flex-direction: row;
-    align-items: center;
-    padding: 14px 30px;
-    gap: 10px;
-    background: rgba(255, 255, 255, 0.15);
+#hero-get-in-touch-button.btn {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: none !important;
+    color: #FFFFFF !important;
     box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
-    border: none;
-    border-radius: 50px;
     transition: background 0.3s, opacity 0.3s;
-    text-decoration: none; 
-    justify-content: center;
-    color: #FFFFFF;
 }
 
-.hero-get-in-touch-button:hover {
-    background: rgba(255, 255, 255, 0.22);
-    color: #FFFFFF;
+#hero-get-in-touch-button.btn:hover {
+    background: rgba(255, 255, 255, 0.22) !important;
+    color: #FFFFFF !important;
     opacity: 0.9;
 }
 
-.linkedin-button {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 30px;
-    gap: 10px;
-    width: 155px;
-    height: 52px;
-    border: 2px solid #FFFFFF;
-    border-radius: 52px;
-    flex: none;
-    flex-grow: 0;
-    text-decoration: none;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    color: #FFFFFF;
+#linkedin-button.btn {
+    background: transparent !important;
+    border: 2px solid #FFFFFF !important;
+    color: #FFFFFF !important;
+    font-family: 'Inter' !important;
+    font-weight: 700 !important;
     transition: all 0.3s ease;
 }
 
-.linkedin-button:hover {
-    background: rgba(255, 255, 255, 0.1);
-    text-decoration: none;
-    color: #FFFFFF;
+#linkedin-button.btn:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+}
+
+#salesforce-learn-button.btn {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+}
+
+#salesforce-learn-button.btn:hover {
+    background: rgba(255, 255, 255, 0.22) !important;
+    color: #FFFFFF !important;
+}
+
+#github-button.btn {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: none !important;
+    color: #FFFFFF !important;
+}
+
+#footer-linkedin-button.btn {
+    background: transparent !important;
+    border: 2px solid #FFFFFF !important;
+    color: #FFFFFF !important;
 }
 
 .projects-section {
@@ -274,8 +282,10 @@ p {
 
 .ellipse-bg-left {
     position: absolute;
-    width: 510px;
-    height: 432px;
+    width: 40%;
+    height: 40%;
+    right: -35%;
+    top: 50%;
     background: linear-gradient(180deg, var(--elipse-gradient-start) 0%, var(--elipse-gradient-end) 100%);
     opacity: 0.6;
     filter: blur(91px);
@@ -287,10 +297,10 @@ p {
 .ellipse-bg-right {
     box-sizing: border-box;
     position: absolute;
-    width: 510px;
-    height: 432px;
-    left: -152px;
-    top: 234px;
+    width: 30%;
+    height: 30%;
+    left: -15%;
+    top: 25%;
     background: linear-gradient(180deg, var(--elipse-gradient-start) 0%, var(--elipse-gradient-end) 100%);
     opacity: 0.6;
     border: 1px solid #000000;
