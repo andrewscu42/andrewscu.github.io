@@ -6,8 +6,10 @@
     --btn-background-dark: #8A8A8A;
     --gradient-start: #38C496;
     --gradient-end: #336AFF;
-
-}
+    --get-in-touch-background: #1E1E28;
+    --get-in-touch-border: 1px solid #FFFFFF;
+    --get-in-touch-background-hover: #1E1E28;
+    --get-in-touch-border-hover: 1px solid #FFFFFF;
 
 * {
     color: var(--primary-text) !important; 
@@ -26,12 +28,43 @@ h1 {
     line-height: 3rem;
 }
 
+h2 {
+    font-size: 32px !important;
+    font-family: Poppins;
+    letter-spacing: -0.03em;
+    line-height: 2.5rem;
+}
+
 p {
     font-size: 16px;
     font-family: Inter;
     letter-spacing: 0%;
     line-height: 1.5rem;
     color: var(--primary-text) !important;
+}
+
+.btn {
+    font-family: Poppins, Inter, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: var(--primary-text);
+    letter-spacing: 0;
+    border-radius: 999px;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    border: none;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+.btn:active, .btn:focus {
+    outline: none;
+}
+.btn.btn-outline-primary {
+    background: transparent;
+    color: var(--primary-text);
+    border: 2px solid var(--gradient-end);
 }
 
 .navbar {
@@ -92,7 +125,14 @@ p {
     text-decoration: none;
 }
 
-
+.btn {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
 
 
 #navbar-title {
@@ -105,36 +145,6 @@ p {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent !important;
-}
-
-#portfolio-title-name {
-    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent !important;
-}
-
-#portfolio-subtitle {
-    font-size: 24px !important;
-    font-family: Inter;
-    letter-spacing: 0%;
-    line-height: 2rem;
-}
-
-#get-in-touch-button {
-    background: var(--btn-background-dark) !important;
-    border: 1px solid var(--btn-background-dark) !important;
-    color: var(--primary-text) !important;
-    transition: all 0.3s ease;
-}
-
-#get-in-touch-button:hover {
-    background: var(--btn-background-dark) !important;
-    border: 1px solid var(--btn-background-dark) !important;
-    color: var(--primary-text) !important;
-    opacity: 0.8;
-    transition: all 0.3s ease;
 }
 
 .profile-avatar {
@@ -156,10 +166,71 @@ p {
     border-radius: 50%;
 }
 
-#github-button {    
-    background-color: var(--background-color) !important;
-    border: 1px solid var(--primary-text) !important;
-    color: var(--primary-text) !important;
+#portfolio-title-name {
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent !important;
+}
+
+#portfolio-subtitle {
+    font-size: 24px !important;
+    font-family: Inter;
+    letter-spacing: 0%;
+    line-height: 2rem;
+}
+
+.hero-get-in-touch-button {
+    display: inline-block;
+    flex-direction: row;
+    align-items: center;
+    padding: 14px 30px;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+    border: none;
+    border-radius: 50px;
+    transition: background 0.3s, opacity 0.3s;
+    text-decoration: none; 
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.hero-get-in-touch-button:hover {
+    background: rgba(255, 255, 255, 0.22);
+    color: #FFFFFF;
+    opacity: 0.9;
+}
+
+.linkedin-button {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 14px 30px;
+    gap: 10px;
+    width: 155px;
+    height: 52px;
+    border: 2px solid #FFFFFF;
+    border-radius: 52px;
+    flex: none;
+    flex-grow: 0;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.linkedin-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 #projects {
@@ -169,12 +240,7 @@ p {
     line-height: 3rem;
 }
 
-#salesforce-title {
-    font-size: 32px !important;
-    font-family: Poppins;
-    letter-spacing: -0.03em;
-    line-height: 2.5rem;
-}
+
 
 #salesforce-text{
     font-size: 24px !important;
