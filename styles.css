@@ -462,8 +462,8 @@ p {
     position: absolute;
     left: -10%;
     bottom: -10%;
-    filter: blur(calc(var(--blur-size) * 1.5));
-    opacity: calc(var(--shapes-opacity) * 0.5);
+    filter: blur(calc(var(--blur-size) * 2));
+    opacity: var(--shapes-opacity);
     animation: diagonal-blob ease-in-out 8s infinite;
     animation-delay: 1s;
     z-index: 0;
