@@ -3,14 +3,15 @@
     --green-color: #38C496;
     --primary-text: #FFFFFF;
     --secondary-text: #C5C5C5;
-    --secondary-text-dark: #8A8A8A;
+    --btn-background-dark: #8A8A8A;
     --gradient-start: #38C496;
     --gradient-end: #336AFF;
 
 }
 
 * {
-    color: var(--primary-text) !important;
+    color: var(--primary-text) !important; 
+    font-family: Inter,Poppins,sans-serif;
 }
 
 html, body {
@@ -22,14 +23,14 @@ h1 {
     font-size: 48px !important;
     font-family: Poppins;
     letter-spacing: 0%;
-    line-height: 1.2;
+    line-height: 3rem;
 }
 
 p {
     font-size: 16px;
     font-family: Inter;
     letter-spacing: 0%;
-    line-height: 1.5;
+    line-height: 1.5rem;
     color: var(--primary-text) !important;
 }
 
@@ -37,8 +38,58 @@ p {
     background-color: var(--background-color) !important;
 }
 
-.card {
-    background-color: var(--background-color) !important;
+.project-card {
+    background: #16182a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card__media {
+    background: radial-gradient(120% 80% at 20% 20%, rgba(56, 196, 150, 0.2) 0%, rgba(51, 106, 255, 0.12) 40%, transparent 70%), #111325;
+    border-radius: 10px;
+    height: 9rem;
+    margin: 1rem;
+}
+
+.project-card__body {
+    padding: 1.25rem;
+}
+
+.project-card__title {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.project-card__text {
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+    line-height: 1.6rem;
+    margin: 0 0 1rem 0;
+}
+
+.project-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.project-card__date {
+    color: var(--secondary-text);
+    font-size: 0.85rem;
+}
+
+.project-card__link {
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
 }
 
 
@@ -49,7 +100,7 @@ p {
     font-size: 20px !important;
     font-family: Poppins;
     letter-spacing: 0%;
-    line-height: 1.2;
+    line-height: 1.5rem;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -66,16 +117,24 @@ p {
 
 #portfolio-subtitle {
     font-size: 24px !important;
-    font-family: Poppins;
+    font-family: Inter;
     letter-spacing: 0%;
-    line-height: 1.4;
+    line-height: 2rem;
 }
 
 #get-in-touch-button {
-    background: rgba(255, 255, 255, 0.15) !important;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background: var(--btn-background-dark) !important;
+    border: 1px solid var(--btn-background-dark) !important;
     color: var(--primary-text) !important;
+    transition: all 0.3s ease;
+}
+
+#get-in-touch-button:hover {
+    background: var(--btn-background-dark) !important;
+    border: 1px solid var(--btn-background-dark) !important;
+    color: var(--primary-text) !important;
+    opacity: 0.8;
+    transition: all 0.3s ease;
 }
 
 .profile-avatar {
@@ -107,22 +166,23 @@ p {
     font-size: 48px !important;
     font-family: Poppins;
     letter-spacing: 0%;
-    line-height: 1.2;
+    line-height: 3rem;
 }
 
 #salesforce-title {
     font-size: 32px !important;
     font-family: Poppins;
     letter-spacing: -0.03em;
-    line-height: 1.3;
+    line-height: 2.5rem;
 }
 
 #salesforce-text{
     font-size: 24px !important;
     font-family: Poppins;
     letter-spacing: -0.03em;
-    line-height: 1.4;
+    line-height: 2rem;
 }
+
 
 
 
