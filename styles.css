@@ -10,8 +10,17 @@
     --get-in-touch-border: 1px solid #FFFFFF;
     --get-in-touch-background-hover: #1E1E28;
     --get-in-touch-border-hover: 1px solid #FFFFFF;
-    --elipse-gradient-start: #5BADFF ;
-    --elipse-gradient-end: #1373D1 ;
+    --blur-size: 20px;
+    --shape-1-size: 200px;
+    --shape-3-size: 180px;
+    --shapes-opacity: 70%;
+    --shape-1-color-start: #5BADFF;
+    --shape-1-color-end: #1373D1;
+    --shape-2-color-start: #38C496;
+    --shape-2-color-end: #336AFF;
+    --shape-3-color-start: #5BADFF;
+    --shape-3-color-end: #38C496;
+}
 
 * {
     color: var(--primary-text) !important; 
@@ -160,6 +169,9 @@ p {
 .hero-section {
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .profile-avatar {
@@ -264,6 +276,7 @@ p {
 .salesforce-section {
     position: relative;
     overflow: hidden;
+    min-height: 60vh;
 }
 
 #salesforce-text{
@@ -280,52 +293,85 @@ p {
     line-height: 1.5rem;
 }
 
-.ellipse-bg-left {
+.shape-1 {
+    width: var(--shape-1-size);
+    height: var(--shape-1-size);
+    background: linear-gradient(180deg, var(--shape-1-color-start) 0%, var(--shape-1-color-end) 100%);
+    border-radius: 50%;
     position: absolute;
-    width: 40%;
-    height: 40%;
-    right: -35%;
-    top: 50%;
-    background: linear-gradient(180deg, var(--elipse-gradient-start) 0%, var(--elipse-gradient-end) 100%);
-    opacity: 0.6;
-    filter: blur(91px);
-    transform: rotate(-158deg) scale(0.75);
+    left: -50px;
+    top: 20%;
+    mix-blend-mode: screen;
+    filter: blur(var(--blur-size));
+    opacity: var(--shapes-opacity);
+    animation: blob ease-in 7s infinite;
     z-index: -1;
     pointer-events: none;
 }
 
-.ellipse-bg-right {
-    box-sizing: border-box;
+.shape-2 {
+    width: var(--shape-1-size);
+    height: var(--shape-1-size);
+    background: linear-gradient(180deg, var(--shape-2-color-start) 0%, var(--shape-2-color-end) 100%);
+    border-radius: 50%;
     position: absolute;
-    width: 30%;
-    height: 30%;
-    left: -15%;
-    top: 25%;
-    background: linear-gradient(180deg, var(--elipse-gradient-start) 0%, var(--elipse-gradient-end) 100%);
-    opacity: 0.6;
-    border: 1px solid #000000;
-    filter: blur(91px);
+    right: -50px;
+    top: 30%;
+    mix-blend-mode: screen;
+    filter: blur(var(--blur-size));
+    opacity: var(--shapes-opacity);
+    animation: blob ease-in 7s infinite;
+    animation-delay: 2s;
+    animation-direction: reverse;
     z-index: -1;
     pointer-events: none;
 }
 
-
-.hero-section .ellipse-bg-left {
-    right: -200px;
-    top: 35px;
+.shape-3 {
+    width: var(--shape-3-size);
+    height: var(--shape-3-size);
+    background: linear-gradient(180deg, var(--shape-3-color-start) 0%, var(--shape-3-color-end) 100%);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translateX(-50%);
+    mix-blend-mode: screen;
+    filter: blur(var(--blur-size));
+    opacity: var(--shapes-opacity);
+    animation: blob ease-in 7s infinite;
+    animation-delay: 4s;
+    z-index: -1;
+    pointer-events: none;
 }
 
-.hero-section .ellipse-bg-right {
-    left: -200px;
-    top: 50px;
+@keyframes blob {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
 }
 
-.salesforce-section .ellipse-bg-left {
-    right: -200px;
-    top: 35px;
+.salesforce-section .shape-1 {
+    left: -50px;
+    top: 5%;
 }
 
-.salesforce-section .ellipse-bg-right {
-    left: -200px;
-    top: 50px;
-}       
+.salesforce-section .shape-2 {
+    right: -50px;
+    top: 15%;
+}
+
+.salesforce-section .shape-3 {
+    left: 30%;
+    bottom: 5%;
+}
+
